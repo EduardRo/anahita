@@ -5,15 +5,16 @@ import './navbar.scss';
 const NavBarComponent = () => {
   return (
     <Container>
-      <Navbar bg='light' variant='light' expand='lg' class='navbar'>
-        <Navbar.Brand href='#home'>Anahita</Navbar.Brand>
+      <Navbar expand='lg' className='navbar'>
+        <Navbar.Brand href='/'>Anahita</Navbar.Brand>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
 
         <Navbar.Collapse>
           <Nav className='mr-auto'>
-            <NavLink href='#home'>Home</NavLink>
-            <NavLink href='#features'>Tests</NavLink>
-            <NavLink href='#pricing'>Results</NavLink>
+            <NavLink href='/tests'>TESTS</NavLink>
+            <NavLink href='/results'>RESULTS</NavLink>
+            <NavLink href='/login'>LOGIN</NavLink>
+            <NavLink href='/settings'>SETTINGS</NavLink>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
