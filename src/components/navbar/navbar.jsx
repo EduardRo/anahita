@@ -17,6 +17,10 @@ const NavBarComponent = () => {
             <NavLink href='/settings'>SETTINGS</NavLink>
           </Nav>
         </Navbar.Collapse>
+        <Navbar.Brand>
+          Georgiana{' '}
+          <img src='avatar.png' width='50' alt='' className='img'></img>
+        </Navbar.Brand>
       </Navbar>
     </Container>
   );

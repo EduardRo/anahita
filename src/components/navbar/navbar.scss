@@ -1,8 +1,12 @@
 .navbar {
   color: black;
   background-color: white;
+  font-size: 1rem;
 }
 .navbar-light .navbar-nav .nav-link {
   color: black !important;
   text-align: left !important;
+}
+.img {
+  border-radius: 50% !important;
 }
