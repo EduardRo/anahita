@@ -18,6 +18,7 @@ class TADDNUM001 extends Component {
       answers: [],
       stadiu: 0,
       now: 0,
+      progressbar: true,
     };
 
     this.handleAnswer = this.handleAnswer.bind(this);
@@ -33,7 +34,12 @@ class TADDNUM001 extends Component {
 
       this.interval = setInterval(() => {
         this.setState({ stadiu: this.state.stadiu + 1, now: 0 });
+        if (this.state.stadiu > 4) {
+          this.setState({ progressbar: false });
+        }
       }, 11000);
+    } else {
+      this.setState({ progressbar: false });
     }
     console.log('stadiu: ' + this.state.stadiu);
   }
@@ -54,6 +60,7 @@ class TADDNUM001 extends Component {
       this.setState({ answers: [...this.state.answers, question] }, () => {
         console.log(this.state.answers);
       });
+      this.setState({ progressbar: false });
       //console.log('finish');
       //console.log(this.state.answers);
     }
@@ -71,38 +78,52 @@ class TADDNUM001 extends Component {
     return (
       <div>
         <Container>
-          <ProgressBar
-            animated
-            variant='danger'
-            now={this.state.now}
-            style={{ margin: '10px', textAlign: 'center' }}
-          />
+          {this.state.progressbar ? (
+            <ProgressBar
+              animated
+              variant='danger'
+              now={this.state.now}
+              style={{ margin: '10px', textAlign: 'center' }}
+            />
+          ) : (
+            ''
+          )}
         </Container>
         {this.state.answers.length < 5 ? (
           <ButtonGroup vertical>
-            <Question
-              st={st}
-              title={this.state.questions[this.state.stadiu].map(
-                (question, index) => {
-                  if (index < 3) {
-                    return question;
-                  } else return '';
-                }
-              )}
-            />
-            {this.state.questions[this.state.stadiu].map((question, index) => {
-              if (index > 2) {
-                return (
-                  <Answer
-                    key={index}
-                    title={question}
-                    noBtn={index - 2}
-                    anwsernumber={index}
-                    onClick={(answer) => this.handleAnswer(answer, question)}
-                  />
-                );
-              } else return '';
-            })}
+            {this.state.questions[this.state.stadiu] ? (
+              <Question
+                st={st}
+                title={this.state.questions[this.state.stadiu].map(
+                  (question, index) => {
+                    if (index < 3) {
+                      return question;
+                    } else return '';
+                  }
+                )}
+              />
+            ) : (
+              ''
+            )}
+            {this.state.questions[this.state.stadiu]
+              ? this.state.questions[this.state.stadiu].map(
+                  (question, index) => {
+                    if (index > 2) {
+                      return (
+                        <Answer
+                          key={index}
+                          title={question}
+                          noBtn={index - 2}
+                          anwsernumber={index}
+                          onClick={(answer) =>
+                            this.handleAnswer(answer, question)
+                          }
+                        />
+                      );
+                    } else return '';
+                  }
+                )
+              : ''}
           </ButtonGroup>
         ) : (
           <div> {this.state.answers}</div>
