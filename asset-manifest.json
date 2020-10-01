@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/anahita/static/css/main.4cf3ea16.chunk.css",
+    "main.js": "/anahita/static/js/main.f5d7bf6f.chunk.js",
+    "main.js.map": "/anahita/static/js/main.f5d7bf6f.chunk.js.map",
+    "runtime-main.js": "/anahita/static/js/runtime-main.68ca357f.js",
+    "runtime-main.js.map": "/anahita/static/js/runtime-main.68ca357f.js.map",
+    "static/css/2.d9ad5f5c.chunk.css": "/anahita/static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.bc51a8c0.chunk.js": "/anahita/static/js/2.bc51a8c0.chunk.js",
+    "static/js/2.bc51a8c0.chunk.js.map": "/anahita/static/js/2.bc51a8c0.chunk.js.map",
+    "index.html": "/anahita/index.html",
+    "precache-manifest.31eaef1808039bd2a1a9c82882562a6a.js": "/anahita/precache-manifest.31eaef1808039bd2a1a9c82882562a6a.js",
+    "service-worker.js": "/anahita/service-worker.js",
+    "static/css/2.d9ad5f5c.chunk.css.map": "/anahita/static/css/2.d9ad5f5c.chunk.css.map",
+    "static/css/main.4cf3ea16.chunk.css.map": "/anahita/static/css/main.4cf3ea16.chunk.css.map",
+    "static/js/2.bc51a8c0.chunk.js.LICENSE.txt": "/anahita/static/js/2.bc51a8c0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.68ca357f.js",
+    "static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.bc51a8c0.chunk.js",
+    "static/css/main.4cf3ea16.chunk.css",
+    "static/js/main.f5d7bf6f.chunk.js"
+  ]
+}
